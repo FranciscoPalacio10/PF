@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 PRACTICA PROFESIONAL | PracticaProfesional.utf8</title>
+  <title>4 DISEÑO METODOLÓGICO | PracticaProfesional.utf8</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.22.2 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 PRACTICA PROFESIONAL | PracticaProfesional.utf8" />
+  <meta property="og:title" content="4 DISEÑO METODOLÓGICO | PracticaProfesional.utf8" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 PRACTICA PROFESIONAL | PracticaProfesional.utf8" />
+  <meta name="twitter:title" content="4 DISEÑO METODOLÓGICO | PracticaProfesional.utf8" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="presentanción.html"/>
+<link rel="prev" href="introducción.html"/>
+<link rel="next" href="desarrollo.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -151,48 +151,138 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="practica-profesional" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> PRACTICA PROFESIONAL</h1>
-<html>
-<head>
-<body>
-<header>
-<p style="text-align: center">
-<img src="LogoSiglo21.png" alt="LOGO SIGLO 21" width="200"/>
-</p>
-</header>
-<p id="tituloTrabajo">
-<strong> DESARROLO DE SCORING CREDITICIO ALTERNATIVO A LOS BUREAU DE CREDITOS</strong>
-</p>
-<p id="portadaItem">
-<strong>Alumno:</strong> Palacio, Francisco Adrián
-</p>
-<p id="portadaItem">
-<strong>LEGAJO:</strong> VINF07696
-</p>
-<p id="portadaItem">
-<strong>Docente/Tutor:</strong> Frías, Hugo Fernando
-</p>
-<p id="portadaItem">
-<strong>MODULO:</strong> 1
-</p>
-<p id="portadaItem">
-<strong>Fecha:</strong> “2021-06-11”
-</p>
-</p>
-</body>
-</html>
+<div id="diseño-metodológico" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> DISEÑO METODOLÓGICO</h1>
+<p>Se propone seguir un flujo de trabajo general para abordar problemas de Machine Learning, y utilizar el modelo de CRISP-DMM (Cross Industry Standard Process for Data Mining) de mineria de datos. Los pasos a seguir son:</p>
+<ol style="list-style-type: decimal">
+<li>Comprensión del negocio o problema.</li>
+<li>Comprensión de los datos.</li>
+<li>Preparación de los datos.</li>
+<li>Elección una medida o indicador de éxito.</li>
+<li>Modelado de los datos.</li>
+<li>Construcción del modelo.</li>
+<li>Evaluación del modelo.</li>
+<li>Elección del modelo que más ajusta a las necesidades del negocio.</li>
+</ol>
+<img src="TP2/Modelo-CRISP-DM.png" alt="Fintech" width="1000"/></a>
+</th>
+<p>Fuente: <a href="https://www.adictosaltrabajo.com/2021/01/14/metodologia-crisp-dm/" class="uri">https://www.adictosaltrabajo.com/2021/01/14/metodologia-crisp-dm/</a></p>
+<p><strong>CRISP-DM</strong></p>
+<p>CRISP-DM permite crear un modelo de minería de datos que se adapte a sus necesidades concretas, es flexible y se pueden personalizar fácilmente, además, proporciona una descripción normalizada del ciclo de vida de un proyecto estándar de análisis de datos, de forma análoga a como se hace en la ingeniería del software con los modelos de ciclo de vida de desarrollo de software.(<a href="https://www.sngular.com/es/data-science-crisp-dm-metodologia/" class="uri">https://www.sngular.com/es/data-science-crisp-dm-metodologia/</a>).</p>
+<div id="recolección-de-información" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Recolección de información</h2>
+<p>A continuación se presentan las técnicas empleadas para el abordaje de la problemática:</p>
+<p>• Entrevistas no estructuradas o abiertas: Con estas entrevistas, obtener respuestas de los informantes, sino aprender que preguntas hacer y cómo hacerlas, manteniendo una distancia amena y relajada con el entrevistado. Se realizaron entrevistas con el CEO DE LA EMPRESA Horacio Lampe.
+• Análisis documental: el Arquitecto De sistemas,Roberto Schazt, nos facilitó el acceso a la informació,, la cual nos permite obtener las fuentes de datos a utilzar.
+• Observación: se empleó la observación no solo como técnica de recolección de datos sino también como verificación de las entrevistas realizadas. Se realizaron técnicas de de la documentación y procesos implicados.</p>
+</div>
+<div id="paquetes-a-utilizar-en-r" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Paquetes a utilizar en R</h2>
+<ul>
+<li>Tidyverse: es una colección de paquetes R de código abierto presentados por Hadley Wickham y su equipo que “comparten una filosofía de diseño subyacente, gramática y estructuras de datos” de datos ordenados. (<a href="https://en.wikipedia.org/wiki/Tidyverse" class="uri">https://en.wikipedia.org/wiki/Tidyverse</a>).</li>
+</ul>
+<pre><code>## 
+##   Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
+##   Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Article{,
+##     title = {Welcome to the {tidyverse}},
+##     author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D&#39;Agostino McGowan and Romain François and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill Müller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
+##     year = {2019},
+##     journal = {Journal of Open Source Software},
+##     volume = {4},
+##     number = {43},
+##     pages = {1686},
+##     doi = {10.21105/joss.01686},
+##   }</code></pre>
+<ul>
+<li>GGplot2: la librería ggplot2 de R es un sistema organizado de visualización de datos. Forma parte del conjunto de librerías llamado tidyverse.</li>
+</ul>
+<pre><code>## 
+## To cite ggplot2 in publications, please use:
+## 
+##   H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+##   Springer-Verlag New York, 2016.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Book{,
+##     author = {Hadley Wickham},
+##     title = {ggplot2: Elegant Graphics for Data Analysis},
+##     publisher = {Springer-Verlag New York},
+##     year = {2016},
+##     isbn = {978-3-319-24277-4},
+##     url = {https://ggplot2.tidyverse.org},
+##   }</code></pre>
+<ul>
+<li>RODBC: es una sigla para Open Database Connectivity, el cual actúa como una interfaz entre la base de datos y el lenguaje de computo que lo consume. Es por eso que RODBC se puede usar para conectar con muchos tipos de base de datos. PostgreSQL MySQL, Microsft SQL Server, IBM DB2, SQLite para nombrar los mas comunes. (<a href="https://rstudio-pubs-static.s3.amazonaws.com/143342_b995f264c1e2483eb70e51fffc5eeca3.html#" class="uri">https://rstudio-pubs-static.s3.amazonaws.com/143342_b995f264c1e2483eb70e51fffc5eeca3.html#</a>:~:text=Esto%20es%20una%20sigla%20para,para%20nombrar%20los%20mas%20comunes.)</li>
+</ul>
+<pre><code>## 
+## To cite package &#39;RODBC&#39; in publications use:
+## 
+##   Brian Ripley and Michael Lapsley (2020). RODBC: ODBC Database Access.
+##   R package version 1.3-17. https://CRAN.R-project.org/package=RODBC
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {RODBC: ODBC Database Access},
+##     author = {Brian Ripley and Michael Lapsley},
+##     year = {2020},
+##     note = {R package version 1.3-17},
+##     url = {https://CRAN.R-project.org/package=RODBC},
+##   }</code></pre>
+<ul>
+<li>Caret: incluye una serie de funciones que facilitan el uso de decenas de métodos complejos de clasificación y regresión. Utilizar este paquete en lugar de las funciones originales de los métodos presenta dos ventajas:</li>
+</ul>
+<p>Permite utilizar un código unificado para aplicar reglas de clasificación muy distintas, implementadas en diferentes paquetes.
+Es más fácil poner en práctica algunos procedimientos usuales en problemas de clasificación. Por ejemplo, hay funciones específicas para dividir la muestra en datos de entrenamiento y datos de test o para ajustar parámetros mediante validación cruzada. (<a href="https://rpubs.com/joser/caret" class="uri">https://rpubs.com/joser/caret</a>)</p>
+<pre><code>## 
+## To cite package &#39;caret&#39; in publications use:
+## 
+##   Max Kuhn (2021). caret: Classification and Regression Training. R
+##   package version 6.0-88. https://CRAN.R-project.org/package=caret
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {caret: Classification and Regression Training},
+##     author = {Max Kuhn},
+##     year = {2021},
+##     note = {R package version 6.0-88},
+##     url = {https://CRAN.R-project.org/package=caret},
+##   }</code></pre>
+<ul>
+<li>Plotly: es otro paquete de gráficos en R para crear gráficos interactivos con calidad de publicación.</li>
+</ul>
+<pre><code>## 
+## To cite plotly in publications use:
+## 
+##   C. Sievert. Interactive Web-Based Data Visualization with R, plotly,
+##   and shiny. Chapman and Hall/CRC Florida, 2020.
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Book{,
+##     author = {Carson Sievert},
+##     title = {Interactive Web-Based Data Visualization with R, plotly, and shiny},
+##     publisher = {Chapman and Hall/CRC},
+##     year = {2020},
+##     isbn = {9781138331457},
+##     url = {https://plotly-r.com},
+##   }</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="presentanción.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introducción.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="desarrollo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

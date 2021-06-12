@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 PROCESAMIENTO DE DATOS | PracticaProfesional.utf8</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.22.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 PROCESAMIENTO DE DATOS | PracticaProfesional.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 PROCESAMIENTO DE DATOS | PracticaProfesional.utf8" />
+  
+  
+  
+
+
+
+<meta name="date" content="2021-06-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="desarrollo.html"/>
+
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.18/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html"./">PRACTICA PROFESIONAL</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> PRACTICA PROFESIONAL</a></li>
+<li class="chapter" data-level="2" data-path="presentanción.html"><a href="presentanción.html"><i class="fa fa-check"></i><b>2</b> PRESENTANCIÓN</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="presentanción.html"><a href="presentanción.html#cúrriculum"><i class="fa fa-check"></i><b>2.1</b> Cúrriculum</a></li>
+<li class="chapter" data-level="2.2" data-path="presentanción.html"><a href="presentanción.html#carta-de-presentación"><i class="fa fa-check"></i><b>2.2</b> Carta de presentación</a></li>
+<li class="chapter" data-level="2.3" data-path="presentanción.html"><a href="presentanción.html#perfil-de-linkedin"><i class="fa fa-check"></i><b>2.3</b> Perfil de LinkedIn</a></li>
+<li class="chapter" data-level="2.4" data-path="presentanción.html"><a href="presentanción.html#video-de-presentación"><i class="fa fa-check"></i><b>2.4</b> Video de presentación</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>3</b> INTRODUCCIÓN</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introducción.html"><a href="introducción.html#presentación-de-la-organización"><i class="fa fa-check"></i><b>3.1</b> Presentación de la organización</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="introducción.html"><a href="introducción.html#reseña-histórica"><i class="fa fa-check"></i><b>3.1.1</b> Reseña histórica</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introducción.html"><a href="introducción.html#vision"><i class="fa fa-check"></i><b>3.1.2</b> Vision</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introducción.html"><a href="introducción.html#valores"><i class="fa fa-check"></i><b>3.1.3</b> Valores</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introducción.html"><a href="introducción.html#actvidad"><i class="fa fa-check"></i><b>3.1.4</b> Actvidad</a></li>
+<li class="chapter" data-level="3.1.5" data-path="introducción.html"><a href="introducción.html#organigrama"><i class="fa fa-check"></i><b>3.1.5</b> Organigrama</a></li>
+<li class="chapter" data-level="3.1.6" data-path="introducción.html"><a href="introducción.html#clientes"><i class="fa fa-check"></i><b>3.1.6</b> Clientes</a></li>
+<li class="chapter" data-level="3.1.7" data-path="introducción.html"><a href="introducción.html#análisis-del-sector-de-la-empresa"><i class="fa fa-check"></i><b>3.1.7</b> Análisis del sector de la empresa</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introducción.html"><a href="introducción.html#descripción-del-tema"><i class="fa fa-check"></i><b>3.2</b> Descripción del tema</a></li>
+<li class="chapter" data-level="3.3" data-path="introducción.html"><a href="introducción.html#objetivo-del-trabajo"><i class="fa fa-check"></i><b>3.3</b> Objetivo del trabajo</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="diseño-metodológico.html"><a href="diseño-metodológico.html"><i class="fa fa-check"></i><b>4</b> DISEÑO METODOLÓGICO</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="diseño-metodológico.html"><a href="diseño-metodológico.html#recolección-de-información"><i class="fa fa-check"></i><b>4.1</b> Recolección de información</a></li>
+<li class="chapter" data-level="4.2" data-path="diseño-metodológico.html"><a href="diseño-metodológico.html#paquetes-a-utilizar-en-r"><i class="fa fa-check"></i><b>4.2</b> Paquetes a utilizar en R</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="desarrollo.html"><a href="desarrollo.html"><i class="fa fa-check"></i><b>5</b> DESARROLLO</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="desarrollo.html"><a href="desarrollo.html#diagnóstico"><i class="fa fa-check"></i><b>5.1</b> Diagnóstico</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="desarrollo.html"><a href="desarrollo.html#situación-organizacional-actual."><i class="fa fa-check"></i><b>5.1.1</b> Situación organizacional actual.</a></li>
+<li class="chapter" data-level="5.1.2" data-path="desarrollo.html"><a href="desarrollo.html#problematica"><i class="fa fa-check"></i><b>5.1.2</b> Problematica</a></li>
+<li class="chapter" data-level="5.1.3" data-path="desarrollo.html"><a href="desarrollo.html#fundamento"><i class="fa fa-check"></i><b>5.1.3</b> Fundamento</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="desarrollo.html"><a href="desarrollo.html#propuesta-profesional"><i class="fa fa-check"></i><b>5.2</b> Propuesta profesional</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="desarrollo.html"><a href="desarrollo.html#objetivo-general."><i class="fa fa-check"></i><b>5.2.1</b> Objetivo General.</a></li>
+<li class="chapter" data-level="5.2.2" data-path="desarrollo.html"><a href="desarrollo.html#objetivos-específicos."><i class="fa fa-check"></i><b>5.2.2</b> Objetivos Específicos.</a></li>
+<li class="chapter" data-level="5.2.3" data-path="desarrollo.html"><a href="desarrollo.html#límites-y-alcances"><i class="fa fa-check"></i><b>5.2.3</b> Límites y alcances:</a></li>
+<li class="chapter" data-level="5.2.4" data-path="desarrollo.html"><a href="desarrollo.html#recursos"><i class="fa fa-check"></i><b>5.2.4</b> Recursos</a></li>
+<li class="chapter" data-level="5.2.5" data-path="desarrollo.html"><a href="desarrollo.html#diagrama-de-gantt"><i class="fa fa-check"></i><b>5.2.5</b> Diagrama de Gantt</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html"><i class="fa fa-check"></i><b>6</b> PROCESAMIENTO DE DATOS</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#comprensión-de-los-datos"><i class="fa fa-check"></i><b>6.1</b> Comprensión de los datos</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#obtención-de-datos"><i class="fa fa-check"></i><b>6.1.1</b> Obtención de datos</a></li>
+<li class="chapter" data-level="6.1.2" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#analisis-de-datos"><i class="fa fa-check"></i><b>6.1.2</b> Analisis de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#limpieza-de-datos"><i class="fa fa-check"></i><b>6.2</b> Limpieza de datos</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#eliminar-datos-repetidos-y-nulos"><i class="fa fa-check"></i><b>6.2.1</b> Eliminar datos repetidos y Nulos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#transformación-de-datos"><i class="fa fa-check"></i><b>6.3</b> Transformación de datos</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#redefinir-tipo-de-datos"><i class="fa fa-check"></i><b>6.3.1</b> Redefinir Tipo De Datos</a></li>
+<li class="chapter" data-level="6.3.2" data-path="procesamiento-de-datos.html"><a href="procesamiento-de-datos.html#remplazar-valores-na-o-nulos-imputación"><i class="fa fa-check"></i><b>6.3.2</b> Remplazar valores NA o Nulos (Imputación)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="procesamiento-de-datos" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> PROCESAMIENTO DE DATOS</h1>
+<div id="comprensión-de-los-datos" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Comprensión de los datos</h2>
+<div id="obtención-de-datos" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Obtención de datos</h3>
+<p>Para iniciar con el desarrollo del modelo, se obtienen desde la base de datos la información necesaria con la que se trabajará a lo largo del proceso.
+Como primer paso analizamos la base de datos en busca de las tablas que nos proporcionará la información necesaria. Del resultado de este analistas obtuvimos que la información necesaria se obtendrá de la base de datos ‘DatosPersonales’ y las tablas:</p>
+<ul>
+<li>ActiveLoanHeader: la cual tiene los datos que hacen referencia a los prestamos otorgados.</li>
+<li>Auth0User: la cual tiene los datos referentes a los usuarios de los prestamos.</li>
+<li>BigDataTabla: la cual tiene los datos crediticios relacionados con los usuarios, obtenidos de los buró de cerditos</li>
+</ul>
+<p>El primer problema es que gran parte de la información a utilizar se encuentra en una sola columna, de la tabla ‘CacheVariablesNosis,’con formato JSON. Esta tabla cuenta con más de quince mil columnas. Para resolver esto se diseñaron dos funciones, las cuales permiten obtener los valores almacenados en el JSON y con ellos crear una nueva tabla, llamada ‘BigDataTabla,’ a si poder relacionarlas con las tablas mencionadas.
+El segundo problema es como obtener en una sola tabla los datos de las tres tablas mencionadas. Para resolver esto se creo la vista ‘View_BigData,’ la cual contiene 28945 filas y 112 columnas.</p>
+<p>Para la conexión a la base de datos desde RStudio se debe utilizar el paquete “RODBC” y la sentencia que permite obtener la conexión:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="procesamiento-de-datos.html#cb1-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">odbcDriverConnect</span>(<span class="st">&quot;Driver=SQLSERVER;Server=&quot;&quot;;Port=&quot;&quot;;Database=&quot;&quot;;Uid=&quot;&quot;;Pwd=&quot;&quot; &quot;</span>)</span></code></pre></div>
+<p>, una vez obtenida la conexión se procede a obtener la vista generada en la base de datos y la asignamos a una variable llamada
+“DatosPrestamos” que es del tipo Data Frame:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="procesamiento-de-datos.html#cb2-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">sqlQuery</span>(con,<span class="st">&quot;SELECT *  FROM [dbo].[View_BigData]&quot;</span>))</span></code></pre></div>
+</div>
+<div id="analisis-de-datos" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Analisis de datos</h3>
+<p>Para empezar con el análisis de datos, que nos permitirá obtener un conocimiento más profundo utilizaremos las siguientes funciones.</p>
+<ol style="list-style-type: decimal">
+<li>Obtenemos solo información de donde el Id de los prestamos exista.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="procesamiento-de-datos.html#cb3-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamos <span class="ot">&lt;-</span> DfDatosPrestamos  <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ActiveLoanHeaderId))</span></code></pre></div>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Limpiamos los espacios de los nombres de las columnas.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="procesamiento-de-datos.html#cb4-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(DfDatosPrestamos <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>UserName,<span class="sc">-</span>CUIL) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="procesamiento-de-datos.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">clean_names</span>())  </span></code></pre></div>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li>La dimensión de nuestro Data Frame (tabla con los datos) filtrado.</li>
+</ol>
+<pre><code>## [1] 721 110</code></pre>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Una primera impresión de nuestros datos.</li>
+</ol>
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<div id="htmlwidget-01539273d293537f8087" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-01539273d293537f8087">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],[2820,5380,2124,3344,2128,3432,null,1759,5166,7607],[700,0,100,100,400,500,null,300,0,300],[null,null,0,null,0,2,null,0,null,null],["C2","D1","D1","D1","D1","D1",null,"D1","D1","D2"],[null,null,0,null,0,9,null,0,null,null],[null,null,1,null,5,0,null,3,null,null],[0,0,5,0,7,0,null,2,0,3],[null,null,1,null,3,1,null,0,null,null],[null,null,7,null,15,1,null,5,null,null],[705,1,508,1,348,614,null,1,1,183],[0,0,0,0,0,0,null,0,0,0],[0,0,0,0,0,0,null,0,0,0],[0,0,0,0,0,0,null,0,0,0],["false","true","true","true","true","true",null,"true","true","false"],["false","false","false","false","false","false",null,"false","false","true"],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],[0,0,0,0,0,0,null,0,0,0],["false","false","false","false","false","false",null,"false","false","false"],[0,0,0,0,0,0,null,0,0,0],["false","false","false","false","false","false",null,"false","false","false"],[332,0,0,146,58,0,null,68,326,0],[1,1,0,1,1,1,null,1,1,1],[0,0,0,0,0,0,null,0,0,0],["","","","","","",null,"","",""],["","","","","","",null,"","",""],[1100,11112,0,14543,19170,6282,null,8143,1952,724],["","","","&lt;Detalle&gt;&lt;D&gt;JUBILADO|Jubilació","","",null,"","","&lt;Detalle&gt;&lt;D&gt;PENSIONADO|Pensión"],["true","false","false","false","false","false",null,"true","false","false"],[null,null,14,null,28,13,null,28,null,null],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],[30671208710,null,null,null,null,null,null,33707893899,null,null],[843000,0,0,0,0,0,null,241009,0,0],[39,0,0,0,0,0,null,169,0,0],["false","false","false","false","false","false",null,"false","false","false"],["true","true","false","true","true","true",null,"true","true","true"],["false","false","false","false","false","false",null,"false","false","false"],[723,1,178,124,473,504,null,324,55,365],["1945-08-16","1945-12-24","1949-09-10","1947-12-23","1951-08-15","1951-04-06",null,"1954-01-05","1954-03-15","1955-07-01"],[61419,29712,29712,29712,29712,29712,null,29712,29712,17856],[1100,11112,0,14543,19170,6282,null,8143,1952,724],[null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null],[332,null,null,146,58,null,null,68,326,null],["No","Si","Si","Si","Si","Si",null,"Si","Si","No"],["Si","No","No","No","No","No",null,"Si","No","No"],["No","No","No","No","No","No",null,"No","No","No"],["No","No","No","No","No","No",null,"No","No","No"],["No","No","No","No","No","No",null,"No","No","No"],["No","No","No","No","No","No",null,"No","No","No"],[null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null],["No","No","No","No","No","No",null,"No","No","No"],[39,null,null,null,null,null,null,169,null,null],["CAJA DE JUBILACIONES Y PENSIONES DE ENTRE RIOS","","","","","",null,"SANDALL S R L","",""],[null,null,null,null,null,null,null,null,null,null],[1,1,0,1,1,1,null,1,1,1],[1,null,0,1,1,null,null,1,null,1],[1,6,null,5,3,3,null,1,5,2],[1,4,0,1,1,1,null,1,1,1],[null,null,null,null,null,null,null,null,null,null],["Si","Si","No","Si","Si","Si",null,"Si","Si","Si"],[null,null,null,null,null,null,null,null,null,null],[1100,11112,null,14543,19170,6282,null,8143,1952,724],[null,0.38,null,null,null,0.25,null,null,0.09,null],[null,6.83,null,null,null,2.92,null,null,2.32,null],["No","No","No","No","No","No",null,"No","No","No"],[null,null,null,null,null,null,null,null,null,null],["723","1","178","124","473","504",null,"324","55","365"],[null,null,null,null,null,null,null,null,null,null],["705","1","508","1","348","614",null,"1","1","183"],["C2","D1","D1","D1","D1","D1",null,"D1","D1","D2"],[null,null,null,null,null,null,null,null,null,null],["C2","D1","D1","D1","D1","D1",null,"D1","D1","D2"],[null,null,null,null,null,null,null,null,null,null],[0,0,0,1,0,0,null,1,0,0],[null,null,0,null,0,7,null,0,null,null],["true","false","true","true","true","false",null,"true","false","true"],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],["false","false","false","false","false","false",null,"false","false","false"],["CAJA DE JUBILACIONES Y PENSION","","","","","",null,"SANDALL S R L","",""],[0,0,0,0,0,0,null,0,0,0],[705,1,508,1,348,614,null,1,1,183],["Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos","Tiene un préstamo activo en Mifos"],[null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null],[1,null,null,7,3,null,null,5,null,2],["","","2014-05-01","2014-01-01","2017-09-01","2016-08-01",null,"2017-06-01","2011-07-01","2020-11-01"],[368,696,485,88,383,524,302,419,609,689],[16,22,16,17,16,22,16,16,22,17],[13500,4000,10000,20000,10000,10000,10000,10000,5000,10000],[18883.48,7608.07,23670.4,71683.88,24734.25,28234.36,10059.69,20748.81,12324.44,33590.68],[10042.35,0,0,0,0,0,10793.49,0,0,0],[0,0,8847.87,21504.86,24734.25,4873.73,10059.69,14127.37,2127.93,0],["2021-02-26T03:00:00Z","2021-05-31T03:00:00Z","2021-04-05T03:00:00Z","2021-03-09T03:00:00Z","2021-03-01T03:00:00Z","2021-04-12T03:00:00Z","2021-01-26T03:00:00Z","2021-03-15T03:00:00Z","2021-04-30T03:00:00Z","2021-05-26T03:00:00Z"],["4859098C-8DB7-4C0D-9BF2-87F8D46BE8F3","A8BE1A1A-DBC8-4B55-877F-0DEA99669C4E","35BEFFAC-1E86-43A2-BEA7-9020A6A31FAE","6B00F532-1C61-4658-BCDB-B5723BDA4C1D","4B5BCAB8-4000-417F-87F0-4621869009F4","1FBB475D-B2CA-4D27-9321-83EACB46C7CC","896EFB2B-12FF-499F-B81F-9C1338713228","389F58CD-6880-4C60-8077-E7287E454327","9AF9A135-CEA0-4A4F-B3E9-A9CE07DB61E8","B224D73C-D333-40DB-A27A-99E7862F3701"],[0,0,0,0,0,0,0,0,0,0],[470,474,763,195,520,192,290,637,306,344],[1,1,1,1,1,1,1,1,1,1],[9,3,6,12,4,6,4,3,6,12],[0,0,40,67,73,11,49,40,11,0],[1,1,2,2,2,1,2,2,1,1],[0,0,0,0,0,0,0,0,0,0],["2021-02-18 01:09:13.07667","2021-03-25 22:24:49.34000","2021-03-29 20:24:02.81333","2021-01-29 13:45:50.99000","2021-03-01 06:53:47.67000","2021-04-11 23:09:28.14667","2021-01-25 23:00:26.75667","2021-03-15 18:20:06.38667","2021-03-19 13:03:36.71333","2021-05-25 15:55:11.59000"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>codigo_postal<\/th>\n      <th>score_centena<\/th>\n      <th>numero_consultados_bancos12meses<\/th>\n      <th>nse<\/th>\n      <th>numero_consultados_bancos_financieras12meses<\/th>\n      <th>numero_consultados_financieras1mes<\/th>\n      <th>numero_consultados_otros1mes<\/th>\n      <th>numero_consultados_bancos1mes<\/th>\n      <th>numero_consultados_bancos_financieras_otros1mes<\/th>\n      <th>ultimo_score12m<\/th>\n      <th>ultimo_score9m<\/th>\n      <th>ultimo_score6m<\/th>\n      <th>ultimo_score3m<\/th>\n      <th>es_jubilado<\/th>\n      <th>es_pensionado<\/th>\n      <th>es_pnc<\/th>\n      <th>es_autonomo<\/th>\n      <th>antiguedad_autonomo<\/th>\n      <th>es_inscripto_monotributo<\/th>\n      <th>suma_montos_mayores_a2<\/th>\n      <th>disponibilidad_para_endeudamiento<\/th>\n      <th>antiguedad_inscripcion_afip_en_meses<\/th>\n      <th>peor_situacion_bureau<\/th>\n      <th>cant_bcos_sit_tres<\/th>\n      <th>fecha_alta_monotributo<\/th>\n      <th>fecha_alta_autonomo<\/th>\n      <th>compromiso_mensual<\/th>\n      <th>beneficios_detalle<\/th>\n      <th>es_empleado<\/th>\n      <th>numero_consultados12meses<\/th>\n      <th>posee_concursos_o_quiebras<\/th>\n      <th>posee_juicios<\/th>\n      <th>declaracion_jurada_vigente<\/th>\n      <th>es_moroso<\/th>\n      <th>empleador_rz<\/th>\n      <th>empleador_codigo_actividad<\/th>\n      <th>antiguedad_laboral<\/th>\n      <th>es_menor_de_edad<\/th>\n      <th>bancarizado<\/th>\n      <th>fallecido<\/th>\n      <th>score_f<\/th>\n      <th>fechanacimiento<\/th>\n      <th>ingreso_minimo_estimado<\/th>\n      <th>descuentos_estimados<\/th>\n      <th>score_sco<\/th>\n      <th>score_cda_valor<\/th>\n      <th>antiguedad_inscripcion_afip_meses<\/th>\n      <th>es_jubilado_2<\/th>\n      <th>es_empleado_2<\/th>\n      <th>es_integrante_sociedad<\/th>\n      <th>es_empleador<\/th>\n      <th>es_monotributista<\/th>\n      <th>es_autonomo_2<\/th>\n      <th>antiguedad_laboral_2<\/th>\n      <th>antiguedad_autonomo_meses<\/th>\n      <th>es_empleado_domestico<\/th>\n      <th>antiguedad_laboral_empleador_actual<\/th>\n      <th>razon_social_nombre<\/th>\n      <th>estado_de_los_aportes_patronales_como_empleador<\/th>\n      <th>peor_situacion<\/th>\n      <th>peor_situacion_con_10<\/th>\n      <th>cantidad_bancos<\/th>\n      <th>peor_situacion_ult_6_meses<\/th>\n      <th>peor_situacion_con_10_ult_6_meses<\/th>\n      <th>bancarizado_ult_24_meses<\/th>\n      <th>cantidad_tarjetas_de_credito<\/th>\n      <th>compromiso_mensual_2<\/th>\n      <th>compromiso_mensual_nse<\/th>\n      <th>deuda_total_nse<\/th>\n      <th>es_moroso_2<\/th>\n      <th>tiene_referencias_ult_6_meses<\/th>\n      <th>score_vig<\/th>\n      <th>score_3_meses<\/th>\n      <th>score_12_meses<\/th>\n      <th>nivel_socioeconomico<\/th>\n      <th>nivel_socioeconomico_percentil<\/th>\n      <th>nivel_socioeconomico_cda<\/th>\n      <th>nivel_socioeconomico_cada_nse<\/th>\n      <th>cant_referencias_comerciales_vigentes<\/th>\n      <th>numero_consultados_financieras12meses<\/th>\n      <th>posee_referencias_comerciales_ult24meses<\/th>\n      <th>posee_juicio_quiebra_concurso<\/th>\n      <th>posee_cheques_rechazados_bcra<\/th>\n      <th>posee_referencias_o_morosidades<\/th>\n      <th>empleador<\/th>\n      <th>cantidad_aportes_patronales_impagos12meses<\/th>\n      <th>score_ultimo12meses<\/th>\n      <th>ultima_regla<\/th>\n      <th>bureau_de_credito_del_bcra<\/th>\n      <th>cheques_rechazados_del_bcra<\/th>\n      <th>edad<\/th>\n      <th>capacidad_endeudamiento_p_personal<\/th>\n      <th>cantidad_bancos_ult_24_meses<\/th>\n      <th>fecha_alta<\/th>\n      <th>active_loan_header_id<\/th>\n      <th>client_id<\/th>\n      <th>total_amount<\/th>\n      <th>outstanding<\/th>\n      <th>paid<\/th>\n      <th>over_due<\/th>\n      <th>fecha_creacion<\/th>\n      <th>hash<\/th>\n      <th>cerrado<\/th>\n      <th>loan_id<\/th>\n      <th>mobbex<\/th>\n      <th>cantidad_cuotas<\/th>\n      <th>dias_atraso<\/th>\n      <th>situacion<\/th>\n      <th>pasa_reglas<\/th>\n      <th>created_date<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,5,6,7,8,9,10,11,12,13,18,20,22,23,24,27,30,35,36,37,41,43,44,46,47,54,57,59,60,61,62,63,64,66,67,68,69,73,76,79,80,86,87,92,93,95,96,97,98,99,100,103,104,105,106,107,108,109]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+figura 6.1: Funcion Head
+</p>
+</div>
+<p>La primera impresión al ver nuestros datos es que hay muchas columnas con valores null(NA), otros que su tipo no corresponde al valor que contienen en el caso de valores que actualmente son caracter y se deben transformar a bool, date, int respectivamente.</p>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>El tipo de dato de cada columna de la tabla:</li>
+</ol>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<div id="htmlwidget-85833acac564628742fd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85833acac564628742fd">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110"],["codigo_postal","score_centena","numero_consultados_bancos12meses","nse","numero_consultados_bancos_financieras12meses","numero_consultados_financieras1mes","numero_consultados_otros1mes","numero_consultados_bancos1mes","numero_consultados_bancos_financieras_otros1mes","ultimo_score12m","ultimo_score9m","ultimo_score6m","ultimo_score3m","es_jubilado","es_pensionado","es_pnc","es_autonomo","antiguedad_autonomo","es_inscripto_monotributo","suma_montos_mayores_a2","disponibilidad_para_endeudamiento","antiguedad_inscripcion_afip_en_meses","peor_situacion_bureau","cant_bcos_sit_tres","fecha_alta_monotributo","fecha_alta_autonomo","compromiso_mensual","beneficios_detalle","es_empleado","numero_consultados12meses","posee_concursos_o_quiebras","posee_juicios","declaracion_jurada_vigente","es_moroso","empleador_rz","empleador_codigo_actividad","antiguedad_laboral","es_menor_de_edad","bancarizado","fallecido","score_f","fechanacimiento","ingreso_minimo_estimado","descuentos_estimados","score_sco","score_cda_valor","antiguedad_inscripcion_afip_meses","es_jubilado_2","es_empleado_2","es_integrante_sociedad","es_empleador","es_monotributista","es_autonomo_2","antiguedad_laboral_2","antiguedad_autonomo_meses","es_empleado_domestico","antiguedad_laboral_empleador_actual","razon_social_nombre","estado_de_los_aportes_patronales_como_empleador","peor_situacion","peor_situacion_con_10","cantidad_bancos","peor_situacion_ult_6_meses","peor_situacion_con_10_ult_6_meses","bancarizado_ult_24_meses","cantidad_tarjetas_de_credito","compromiso_mensual_2","compromiso_mensual_nse","deuda_total_nse","es_moroso_2","tiene_referencias_ult_6_meses","score_vig","score_3_meses","score_12_meses","nivel_socioeconomico","nivel_socioeconomico_percentil","nivel_socioeconomico_cda","nivel_socioeconomico_cada_nse","cant_referencias_comerciales_vigentes","numero_consultados_financieras12meses","posee_referencias_comerciales_ult24meses","posee_juicio_quiebra_concurso","posee_cheques_rechazados_bcra","posee_referencias_o_morosidades","empleador","cantidad_aportes_patronales_impagos12meses","score_ultimo12meses","ultima_regla","bureau_de_credito_del_bcra","cheques_rechazados_del_bcra","edad","capacidad_endeudamiento_p_personal","cantidad_bancos_ult_24_meses","fecha_alta","active_loan_header_id","client_id","total_amount","outstanding","paid","over_due","fecha_creacion","hash","cerrado","loan_id","mobbex","cantidad_cuotas","dias_atraso","situacion","pasa_reglas","created_date"],["integer","integer","integer","character","integer","integer","integer","integer","integer","integer","integer","integer","integer","character","character","character","character","integer","character","integer","character","integer","integer","integer","character","character","integer","character","character","integer","character","character","character","character","double","integer","integer","character","character","character","integer","character","double","double","character","integer","integer","character","character","character","character","character","character","integer","logical","character","integer","character","integer","integer","integer","integer","integer","integer","character","integer","integer","double","double","character","character","character","integer","character","character","integer","character","character","integer","integer","character","character","character","character","character","integer","integer","character","character","character","character","integer","integer","character","integer","integer","double","double","double","double","double","character","integer","integer","integer","integer","integer","integer","integer","character"],["2820, 5380, 2124, 3344, 2128, 3432","700, 0, 100, 100, 400, 500","NA, NA, 0, NA, 0, 2","C2, D1, D1, D1, D1, D1","NA, NA, 0, NA, 0, 9","NA, NA, 1, NA, 5, 0","0, 0, 5, 0, 7, 0","NA, NA, 1, NA, 3, 1","NA, NA, 7, NA, 15, 1","705, 1, 508, 1, 348, 614","0, 0, 0, 0, 0, 0","0, 0, 0, 0, 0, 0","0, 0, 0, 0, 0, 0","false, true, true, true, true, true","false, false, false, false, false, false","false, false, false, false, false, false","false, false, false, false, false, false","0, 0, 0, 0, 0, 0","false, false, false, false, false, false","0, 0, 0, 0, 0, 0","false, false, false, false, false, false","332, 0, 0, 146, 58, 0","1, 1, 0, 1, 1, 1","0, 0, 0, 0, 0, 0",", , , , , ",", , , , , ","1100, 11112, 0, 14543, 19170, 6282",", , , &lt;Detalle&gt;&lt;D&gt;JUBILADO|Jubilació, , ","true, false, false, false, false, false","NA, NA, 14, NA, 28, 13","false, false, false, false, false, false","false, false, false, false, false, false","false, false, false, false, false, false","false, false, false, false, false, false","30671208710, NA, NA, NA, NA, NA","843000, 0, 0, 0, 0, 0","39, 0, 0, 0, 0, 0","false, false, false, false, false, false","true, true, false, true, true, true","false, false, false, false, false, false","723, 1, 178, 124, 473, 504","1945-08-16, 1945-12-24, 1949-09-10, 1947-12-23, 1951-08-15, 1951-04-06","61419, 29712, 29712, 29712, 29712, 29712","1100, 11112, 0, 14543, 19170, 6282","NA, NA, NA, NA, NA, NA","NA, NA, NA, NA, NA, NA","332, NA, NA, 146, 58, NA","No, Si, Si, Si, Si, Si","Si, No, No, No, No, No","No, No, No, No, No, No","No, No, No, No, No, No","No, No, No, No, No, No","No, No, No, No, No, No","NA, NA, NA, NA, NA, NA","NA, NA, NA, NA, NA, NA","No, No, No, No, No, No","39, NA, NA, NA, NA, NA","CAJA DE JUBILACIONES Y PENSIONES DE ENTRE RIOS, , , , , ","NA, NA, NA, NA, NA, NA","1, 1, 0, 1, 1, 1","1, NA, 0, 1, 1, NA","1, 6, NA, 5, 3, 3","1, 4, 0, 1, 1, 1","NA, NA, NA, NA, NA, NA","Si, Si, No, Si, Si, Si","NA, NA, NA, NA, NA, NA","1100, 11112, NA, 14543, 19170, 6282","NA, 0.38, NA, NA, NA, 0.25","NA, 6.83, NA, NA, NA, 2.92","No, No, No, No, No, No","NA, NA, NA, NA, NA, NA","723, 1, 178, 124, 473, 504","NA, NA, NA, NA, NA, NA","705, 1, 508, 1, 348, 614","C2, D1, D1, D1, D1, D1","NA, NA, NA, NA, NA, NA","C2, D1, D1, D1, D1, D1","NA, NA, NA, NA, NA, NA","0, 0, 0, 1, 0, 0","NA, NA, 0, NA, 0, 7","true, false, true, true, true, false","false, false, false, false, false, false","false, false, false, false, false, false","false, false, false, false, false, false","CAJA DE JUBILACIONES Y PENSION, , , , , ","0, 0, 0, 0, 0, 0","705, 1, 508, 1, 348, 614","Tiene un préstamo activo en Mifos, Tiene un préstamo activo en Mifos, Tiene un préstamo activo en Mifos, Tiene un préstamo activo en Mifos, Tiene un préstamo activo en Mifos, Tiene un préstamo activo en Mifos","NA, NA, NA, NA, NA, NA","NA, NA, NA, NA, NA, NA","NA, NA, NA, NA, NA, NA","NA, NA, NA, NA, NA, NA","1, NA, NA, 7, 3, NA",", , 2014-05-01, 2014-01-01, 2017-09-01, 2016-08-01","368, 696, 485, 88, 383, 524","16, 22, 16, 17, 16, 22","13500, 4000, 10000, 20000, 10000, 10000","18883.48, 7608.07, 23670.4, 71683.88, 24734.25, 28234.36","10042.35, 0, 0, 0, 0, 0","0, 0, 8847.87, 21504.86, 24734.25, 4873.73","2021-02-26, 2021-05-31, 2021-04-05, 2021-03-09, 2021-03-01, 2021-04-12","4859098C-8DB7-4C0D-9BF2-87F8D46BE8F3, A8BE1A1A-DBC8-4B55-877F-0DEA99669C4E, 35BEFFAC-1E86-43A2-BEA7-9020A6A31FAE, 6B00F532-1C61-4658-BCDB-B5723BDA4C1D, 4B5BCAB8-4000-417F-87F0-4621869009F4, 1FBB475D-B2CA-4D27-9321-83EACB46C7CC","0, 0, 0, 0, 0, 0","470, 474, 763, 195, 520, 192","1, 1, 1, 1, 1, 1","9, 3, 6, 12, 4, 6","0, 0, 40, 67, 73, 11","1, 1, 2, 2, 2, 1","0, 0, 0, 0, 0, 0","2021-02-18 01:09:13.07667, 2021-03-25 22:24:49.34000, 2021-03-29 20:24:02.81333, 2021-01-29 13:45:50.99000, 2021-03-01 06:53:47.67000, 2021-04-11 23:09:28.14667"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>variable<\/th>\n      <th>classe<\/th>\n      <th>first_values<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+figura 6.2: Funcion Str
+</p>
+</div>
+<p><br></p>
+<p>6)Informacion estadistica de las variables numericas:</p>
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<div id="htmlwidget-26cf43c8168c6639660b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26cf43c8168c6639660b">{"x":{"filter":"none","data":[["X","X.1","X.2","X.3","X.4","X.5","X.6"],["Min.   :   0  ","1st Qu.:1828  ","Median :3300  ","Mean   :3948  ","3rd Qu.:5700  ","Max.   :9420  ","NA's   :10  "],["Min.   :  0  ","1st Qu.:  0  ","Median :  0  ","Mean   :101  ","3rd Qu.:200  ","Max.   :700  ","NA's   :2  "],["Min.   : 0.0000  ","1st Qu.: 0.0000  ","Median : 0.0000  ","Mean   : 0.4253  ","3rd Qu.: 0.0000  ","Max.   :11.0000  ","NA's   :333  "],["Min.   : 0.000  ","1st Qu.: 0.000  ","Median : 0.000  ","Mean   : 2.044  ","3rd Qu.: 0.000  ","Max.   :46.000  ","NA's   :333  "],["Min.   : 0.000  ","1st Qu.: 0.000  ","Median : 1.000  ","Mean   : 1.592  ","3rd Qu.: 2.000  ","Max.   :13.000  ","NA's   :334  "],["Min.   :0.0000  ","1st Qu.:0.0000  ","Median :0.0000  ","Mean   :0.8858  ","3rd Qu.:1.0000  ","Max.   :8.0000  ","NA's   :3  "],["Min.   :0.0000  ","1st Qu.:0.0000  ","Median :0.0000  ","Mean   :0.3049  ","3rd Qu.:0.0000  ","Max.   :3.0000  ","NA's   :334  "],["Min.   : 0.000  ","1st Qu.: 0.000  ","Median : 2.000  ","Mean   : 3.119  ","3rd Qu.: 5.000  ","Max.   :17.000  ","NA's   :334  "],["Min.   :  0.0  ","1st Qu.:  1.0  ","Median :  1.0  ","Mean   :129.9  ","3rd Qu.:230.5  ","Max.   :838.0  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :  0.00  ","1st Qu.: 54.00  ","Median : 88.00  ","Mean   : 97.82  ","3rd Qu.:130.00  ","Max.   :335.00  ","NA's   :2  "],["Min.   :0.000  ","1st Qu.:1.000  ","Median :1.000  ","Mean   :1.179  ","3rd Qu.:1.000  ","Max.   :5.000  ","NA's   :2  "],["Min.   :0  ","1st Qu.:0  ","Median :0  ","Mean   :0  ","3rd Qu.:0  ","Max.   :0  ","NA's   :2  "],["Min.   :     0  ","1st Qu.:  1054  ","Median :  4808  ","Mean   :  9949  ","3rd Qu.: 13344  ","Max.   :204087  ","NA's   :2  "],["Min.   : 4.00  ","1st Qu.:21.00  ","Median :30.00  ","Mean   :33.62  ","3rd Qu.:44.00  ","Max.   :99.00  ","NA's   :333  "],["Min.   :2.005e+10  ","1st Qu.:3.061e+10  ","Median :3.069e+10  ","Mean   :3.061e+10  ","3rd Qu.:3.071e+10  ","Max.   :3.500e+10  ","NA's   :59  "],["Min.   :     0  ","1st Qu.:421600  ","Median :651310  ","Mean   :569088  ","3rd Qu.:841100  ","Max.   :960990  ","NA's   :2  "],["Min.   :  0.00  ","1st Qu.: 15.00  ","Median : 39.00  ","Mean   : 60.52  ","3rd Qu.: 98.50  ","Max.   :522.00  ","NA's   :2  "],["Min.   :  0.0  ","1st Qu.:  1.0  ","Median : 64.0  ","Mean   :128.7  ","3rd Qu.:219.0  ","Max.   :763.0  ","NA's   :2  "],["Min.   :    -1  ","1st Qu.: 30139  ","Median : 44246  ","Mean   : 48744  ","3rd Qu.: 61419  ","Max.   :175969  ","NA's   :2  "],["Min.   :     0  ","1st Qu.:  1054  ","Median :  4808  ","Mean   :  9949  ","3rd Qu.: 13344  ","Max.   :204087  ","NA's   :2  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   : 16.0  ","1st Qu.: 70.0  ","Median :108.0  ","Mean   :119.0  ","3rd Qu.:140.5  ","Max.   :335.0  ","NA's   :130  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   :  2.00  ","1st Qu.: 18.00  ","Median : 49.00  ","Mean   : 65.73  ","3rd Qu.:105.00  ","Max.   :522.00  ","NA's   :59  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   :0.000  ","1st Qu.:1.000  ","Median :1.000  ","Mean   :1.179  ","3rd Qu.:1.000  ","Max.   :5.000  ","NA's   :2  "],["Min.   :0.000  ","1st Qu.:1.000  ","Median :1.000  ","Mean   :1.128  ","3rd Qu.:1.000  ","Max.   :5.000  ","NA's   :104  "],["Min.   : 1.000  ","1st Qu.: 1.000  ","Median : 2.000  ","Mean   : 2.841  ","3rd Qu.: 4.000  ","Max.   :13.000  ","NA's   :92  "],["Min.   :0.000  ","1st Qu.:1.000  ","Median :1.000  ","Mean   :1.261  ","3rd Qu.:1.000  ","Max.   :5.000  ","NA's   :2  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   :    45  ","1st Qu.:  2144  ","Median :  6071  ","Mean   : 11194  ","3rd Qu.: 14544  ","Max.   :204087  ","NA's   :82  "],["Min.   :0.0100  ","1st Qu.:0.0900  ","Median :0.1900  ","Mean   :0.2087  ","3rd Qu.:0.3050  ","Max.   :0.6600  ","NA's   :622  "],["Min.   : 0.070  ","1st Qu.: 1.170  ","Median : 2.660  ","Mean   : 3.271  ","3rd Qu.: 4.390  ","Max.   :16.450  ","NA's   :624  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   :0.0000  ","1st Qu.:0.0000  ","Median :1.0000  ","Mean   :0.8053  ","3rd Qu.:1.0000  ","Max.   :6.0000  ","NA's   :2  "],["Min.   : 0.000  ","1st Qu.: 0.000  ","Median : 0.000  ","Mean   : 1.619  ","3rd Qu.: 0.000  ","Max.   :39.000  ","NA's   :333  "],["Min.   : 0.000  ","1st Qu.: 0.000  ","Median : 0.000  ","Mean   : 1.064  ","3rd Qu.: 0.000  ","Max.   :12.000  ","NA's   :2  "],["Min.   :  0.0  ","1st Qu.:  1.0  ","Median :  1.0  ","Mean   :129.9  ","3rd Qu.:230.5  ","Max.   :838.0  ","NA's   :2  "],["Min.   : NA  ","1st Qu.: NA  ","Median : NA  ","Mean   :NaN  ","3rd Qu.: NA  ","Max.   : NA  ","NA's   :721  "],["Min.   : 1.000  ","1st Qu.: 2.000  ","Median : 3.000  ","Mean   : 3.807  ","3rd Qu.: 5.000  ","Max.   :15.000  ","NA's   :147  "],["Min.   :  1.0  ","1st Qu.:181.0  ","Median :361.0  ","Mean   :361.3  ","3rd Qu.:541.0  ","Max.   :723.0  ",null],["Min.   :13.00  ","1st Qu.:16.00  ","Median :16.00  ","Mean   :16.98  ","3rd Qu.:17.00  ","Max.   :22.00  ",null],["Min.   : 2000  ","1st Qu.:10000  ","Median :10000  ","Mean   :13236  ","3rd Qu.:15000  ","Max.   :40000  ",null],["Min.   :     0  ","1st Qu.: 16883  ","Median : 29363  ","Mean   : 32066  ","3rd Qu.: 40823  ","Max.   :156144  ",null],["Min.   :    0  ","1st Qu.:    0  ","Median :    0  ","Mean   : 5116  ","3rd Qu.: 6540  ","Max.   :59794  ",null],["Min.   :     0  ","1st Qu.:     0  ","Median :  8977  ","Mean   : 15187  ","3rd Qu.: 26820  ","Max.   :121221  ",null],["Min.   :0.00000  ","1st Qu.:0.00000  ","Median :0.00000  ","Mean   :0.05964  ","3rd Qu.:0.00000  ","Max.   :1.00000  ",null],["Min.   :   3  ","1st Qu.: 111  ","Median : 247  ","Mean   : 345  ","3rd Qu.: 483  ","Max.   :1140  ",null],["Min.   :0.0000  ","1st Qu.:1.0000  ","Median :1.0000  ","Mean   :0.9223  ","3rd Qu.:1.0000  ","Max.   :1.0000  ",null],["Min.   : 1.000  ","1st Qu.: 4.000  ","Median : 6.000  ","Mean   : 7.064  ","3rd Qu.: 9.000  ","Max.   :24.000  ",null],["Min.   :  0.0  ","1st Qu.:  0.0  ","Median : 40.0  ","Mean   : 56.5  ","3rd Qu.:105.0  ","Max.   :196.0  ",null],["Min.   :1.000  ","1st Qu.:1.000  ","Median :2.000  ","Mean   :1.874  ","3rd Qu.:3.000  ","Max.   :4.000  ",null],["Min.   :0.00000  ","1st Qu.:0.00000  ","Median :0.00000  ","Mean   :0.01526  ","3rd Qu.:0.00000  ","Max.   :1.00000  ",null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>codigo_postal<\/th>\n      <th>score_centena<\/th>\n      <th>numero_consultados_bancos12meses<\/th>\n      <th>numero_consultados_bancos_financieras12meses<\/th>\n      <th>numero_consultados_financieras1mes<\/th>\n      <th>numero_consultados_otros1mes<\/th>\n      <th>numero_consultados_bancos1mes<\/th>\n      <th>numero_consultados_bancos_financieras_otros1mes<\/th>\n      <th>ultimo_score12m<\/th>\n      <th>ultimo_score9m<\/th>\n      <th>ultimo_score6m<\/th>\n      <th>ultimo_score3m<\/th>\n      <th>antiguedad_autonomo<\/th>\n      <th>suma_montos_mayores_a2<\/th>\n      <th>antiguedad_inscripcion_afip_en_meses<\/th>\n      <th>peor_situacion_bureau<\/th>\n      <th>cant_bcos_sit_tres<\/th>\n      <th>compromiso_mensual<\/th>\n      <th>numero_consultados12meses<\/th>\n      <th> empleador_rz<\/th>\n      <th>empleador_codigo_actividad<\/th>\n      <th>antiguedad_laboral<\/th>\n      <th>   score_f<\/th>\n      <th>ingreso_minimo_estimado<\/th>\n      <th>descuentos_estimados<\/th>\n      <th>score_cda_valor<\/th>\n      <th>antiguedad_inscripcion_afip_meses<\/th>\n      <th>antiguedad_laboral_2<\/th>\n      <th>antiguedad_laboral_empleador_actual<\/th>\n      <th>estado_de_los_aportes_patronales_como_empleador<\/th>\n      <th>peor_situacion<\/th>\n      <th>peor_situacion_con_10<\/th>\n      <th>cantidad_bancos<\/th>\n      <th>peor_situacion_ult_6_meses<\/th>\n      <th>peor_situacion_con_10_ult_6_meses<\/th>\n      <th>cantidad_tarjetas_de_credito<\/th>\n      <th>compromiso_mensual_2<\/th>\n      <th>compromiso_mensual_nse<\/th>\n      <th>deuda_total_nse<\/th>\n      <th>score_3_meses<\/th>\n      <th>nivel_socioeconomico_percentil<\/th>\n      <th>cant_referencias_comerciales_vigentes<\/th>\n      <th>numero_consultados_financieras12meses<\/th>\n      <th>cantidad_aportes_patronales_impagos12meses<\/th>\n      <th>score_ultimo12meses<\/th>\n      <th>capacidad_endeudamiento_p_personal<\/th>\n      <th>cantidad_bancos_ult_24_meses<\/th>\n      <th>active_loan_header_id<\/th>\n      <th>  client_id<\/th>\n      <th> total_amount<\/th>\n      <th> outstanding<\/th>\n      <th>     paid<\/th>\n      <th>   over_due<\/th>\n      <th>   cerrado<\/th>\n      <th>   loan_id<\/th>\n      <th>    mobbex<\/th>\n      <th>cantidad_cuotas<\/th>\n      <th> dias_atraso<\/th>\n      <th>  situacion<\/th>\n      <th> pasa_reglas<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+figura 6.3: Funcion Summary
+</p>
+</div>
+<p><br></p>
+<p><strong>Como conclusión de esta primera fase de analisis de datos podemos decir que tenemos:</strong></p>
+<ul>
+<li><p>Total de columnas : 110</p></li>
+<li><p>Total de filas : 721</p></li>
+<li><p>Total de variables numericas : 60.</p></li>
+<li><p>Total de variables caracter: 48.</p></li>
+<li><p>Columnas donde debemos ajustar NA:
+<br></p>
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+</li>
+</ul>
+<div id="htmlwidget-b828ec2fd547465f2faf" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b828ec2fd547465f2faf">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94"],["codigo_postal","score_centena","numero_consultados_bancos12meses","nse","numero_consultados_bancos_financieras12meses","numero_consultados_financieras1mes","numero_consultados_otros1mes","numero_consultados_bancos1mes","numero_consultados_bancos_financieras_otros1mes","ultimo_score12m","ultimo_score9m","ultimo_score6m","ultimo_score3m","es_jubilado","es_pensionado","es_pnc","es_autonomo","antiguedad_autonomo","es_inscripto_monotributo","suma_montos_mayores_a2","disponibilidad_para_endeudamiento","antiguedad_inscripcion_afip_en_meses","peor_situacion_bureau","cant_bcos_sit_tres","fecha_alta_monotributo","fecha_alta_autonomo","compromiso_mensual","beneficios_detalle","es_empleado","numero_consultados12meses","posee_concursos_o_quiebras","posee_juicios","declaracion_jurada_vigente","es_moroso","empleador_rz","empleador_codigo_actividad","antiguedad_laboral","es_menor_de_edad","bancarizado","fallecido","score_f","fechanacimiento","ingreso_minimo_estimado","descuentos_estimados","score_sco","score_cda_valor","antiguedad_inscripcion_afip_meses","peor_situacion_con_10","cantidad_bancos","peor_situacion_ult_6_meses","peor_situacion_con_10_ult_6_meses","bancarizado_ult_24_meses","cantidad_tarjetas_de_credito","compromiso_mensual_2","compromiso_mensual_nse","deuda_total_nse","es_moroso_2","tiene_referencias_ult_6_meses","score_vig","score_3_meses","score_12_meses","nivel_socioeconomico","nivel_socioeconomico_percentil","nivel_socioeconomico_cda","nivel_socioeconomico_cada_nse","cant_referencias_comerciales_vigentes","numero_consultados_financieras12meses","posee_referencias_comerciales_ult24meses","posee_juicio_quiebra_concurso","posee_cheques_rechazados_bcra","posee_referencias_o_morosidades","empleador","cantidad_aportes_patronales_impagos12meses","score_ultimo12meses","ultima_regla","bureau_de_credito_del_bcra","cheques_rechazados_del_bcra","edad","capacidad_endeudamiento_p_personal","cantidad_bancos_ult_24_meses","fecha_alta","active_loan_header_id","client_id","total_amount","outstanding","paid","over_due","fecha_creacion","hash","cerrado","loan_id","mobbex","cantidad_cuotas","dias_atraso"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Nombre Columnas<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+figura 6.4: Columnas NA
+</p>
+</div>
+<p>Total: 94 columnas.
+<br></p>
+</div>
+</div>
+<div id="limpieza-de-datos" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Limpieza de datos</h2>
+<div id="eliminar-datos-repetidos-y-nulos" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Eliminar datos repetidos y Nulos</h3>
+<ol style="list-style-type: decimal">
+<li>Obtener porcentaje de NA de cada columna:</li>
+</ol>
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<div id="htmlwidget-a222251d442a4bd9f764" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a222251d442a4bd9f764">{"x":{"filter":"none","data":[["codigo_postal","score_centena","numero_consultados_bancos12meses","nse","numero_consultados_bancos_financieras12meses","numero_consultados_financieras1mes","numero_consultados_otros1mes","numero_consultados_bancos1mes","numero_consultados_bancos_financieras_otros1mes","ultimo_score12m","ultimo_score9m","ultimo_score6m","ultimo_score3m","es_jubilado","es_pensionado","es_pnc","es_autonomo","antiguedad_autonomo","es_inscripto_monotributo","suma_montos_mayores_a2","disponibilidad_para_endeudamiento","antiguedad_inscripcion_afip_en_meses","peor_situacion_bureau","cant_bcos_sit_tres","fecha_alta_monotributo","fecha_alta_autonomo","compromiso_mensual","beneficios_detalle","es_empleado","numero_consultados12meses","posee_concursos_o_quiebras","posee_juicios","declaracion_jurada_vigente","es_moroso","empleador_rz","empleador_codigo_actividad","antiguedad_laboral","es_menor_de_edad","bancarizado","fallecido","score_f","fechanacimiento","ingreso_minimo_estimado","descuentos_estimados","score_sco","score_cda_valor","antiguedad_inscripcion_afip_meses","es_jubilado_2","es_empleado_2","es_integrante_sociedad","es_empleador","es_monotributista","es_autonomo_2","antiguedad_laboral_2","antiguedad_autonomo_meses","es_empleado_domestico","antiguedad_laboral_empleador_actual","razon_social_nombre","estado_de_los_aportes_patronales_como_empleador","peor_situacion","peor_situacion_con_10","cantidad_bancos","peor_situacion_ult_6_meses","peor_situacion_con_10_ult_6_meses","bancarizado_ult_24_meses","cantidad_tarjetas_de_credito","compromiso_mensual_2","compromiso_mensual_nse","deuda_total_nse","es_moroso_2","tiene_referencias_ult_6_meses","score_vig","score_3_meses","score_12_meses","nivel_socioeconomico","nivel_socioeconomico_percentil","nivel_socioeconomico_cda","nivel_socioeconomico_cada_nse","cant_referencias_comerciales_vigentes","numero_consultados_financieras12meses","posee_referencias_comerciales_ult24meses","posee_juicio_quiebra_concurso","posee_cheques_rechazados_bcra","posee_referencias_o_morosidades","empleador","cantidad_aportes_patronales_impagos12meses","score_ultimo12meses","ultima_regla","bureau_de_credito_del_bcra","cheques_rechazados_del_bcra","edad","capacidad_endeudamiento_p_personal","cantidad_bancos_ult_24_meses","fecha_alta","active_loan_header_id","client_id","total_amount","outstanding","paid","over_due","fecha_creacion","hash","cerrado","loan_id","mobbex","cantidad_cuotas","dias_atraso","situacion","pasa_reglas","created_date"],[0.01,0,0.46,0,0.46,0.46,0,0.46,0.46,0,0,0,0,0,0.01,0.01,0,0,0,0,0,0,0,0,0,0,0,0,0,0.46,0,0,0,0,0.08,0,0,0,0,0,0,0,0,0,1,1,0.18,0,0,0,0,0,0,1,1,0,0.08,0,1,0,0.14,0.13,0,1,0,1,0.11,0.86,0.87,0,1,0,1,0,0,1,0,1,0,0.46,0,0,0,0,0,0,0,0,1,1,1,1,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>PorcentajeNA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+figura 6.5: Eliminar Datos Vacios
+</p>
+</div>
+<p>Se observa que un total de columnas tienen valores NA, donde las siguientes tiene un valor mayor al 70%:</p>
+<pre><code>##                                                 PorcentajeNA
+## numero_consultados_bancos12meses                        0.46
+## numero_consultados_bancos_financieras12meses            0.46
+## numero_consultados_financieras1mes                      0.46
+## numero_consultados_bancos1mes                           0.46
+## numero_consultados_bancos_financieras_otros1mes         0.46
+## numero_consultados12meses                               0.46
+## score_sco                                               1.00
+## score_cda_valor                                         1.00
+## antiguedad_laboral_2                                    1.00
+## antiguedad_autonomo_meses                               1.00
+## estado_de_los_aportes_patronales_como_empleador         1.00
+## peor_situacion_con_10_ult_6_meses                       1.00
+## cantidad_tarjetas_de_credito                            1.00
+## compromiso_mensual_nse                                  0.86
+## deuda_total_nse                                         0.87
+## tiene_referencias_ult_6_meses                           1.00
+## score_3_meses                                           1.00
+## nivel_socioeconomico_percentil                          1.00
+## nivel_socioeconomico_cada_nse                           1.00
+## numero_consultados_financieras12meses                   0.46
+## bureau_de_credito_del_bcra                              1.00
+## cheques_rechazados_del_bcra                             1.00
+## edad                                                    1.00
+## capacidad_endeudamiento_p_personal                      1.00</code></pre>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Eliminar dichos valores de nuestro conjunto de datos.</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="procesamiento-de-datos.html#cb7-1" aria-hidden="true" tabindex="-1"></a>cols_borrar <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">colMeans</span>(<span class="fu">is.na</span>(DfDatosPrestamos)) <span class="sc">&gt;=</span> <span class="fl">0.40</span>)</span>
+<span id="cb7-2"><a href="procesamiento-de-datos.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="procesamiento-de-datos.html#cb7-3" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamos <span class="ot">&lt;-</span> DfDatosPrestamos[,<span class="sc">-</span>cols_borrar]</span></code></pre></div>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Eliminar columnas repetidas y con todos valores ceros.</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="procesamiento-de-datos.html#cb8-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno <span class="ot">&lt;-</span> DfDatosPrestamos <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>es_empleado_2,<span class="sc">-</span>es_autonomo_2,<span class="sc">-</span>es_moroso_2,<span class="sc">-</span>ultima_regla,<span class="sc">-</span>ultimo_score3m,<span class="sc">-</span>ultimo_score6m,<span class="sc">-</span>ultimo_score9m,<span class="sc">-</span>suma_montos_mayores_a2,antiguedad_autonomo,<span class="sc">-</span>fecha_alta_autonomo,<span class="sc">-</span>fecha_alta_monotributo,<span class="sc">-</span>cant_bcos_sit_tres,<span class="sc">-</span>beneficios_detalle,<span class="sc">-</span>compromiso_mensual_2,<span class="sc">-</span>fecha_creacion,<span class="sc">-</span>razon_social_nombre,<span class="sc">-</span>nivel_socioeconomico,<span class="sc">-</span>nivel_socioeconomico_cda,<span class="sc">-</span>empleador,<span class="sc">-</span>hash,<span class="sc">-</span>created_date,<span class="sc">-</span>empleador_rz)</span></code></pre></div>
+<p>Lo cual nos deja un total de 721 filas y 65 columnas.
+Con respecto a las 721 filas y 86 columnas de los datos iniciales.</p>
+<p>A partir de este punto seguiremos trabajando con los datos del <strong>“DfDatosPrestamosUno”</strong>.</p>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Eliminar columnas por temas de negocios.</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="procesamiento-de-datos.html#cb9-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno <span class="ot">&lt;-</span> DfDatosPrestamosUno <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>fallecido,<span class="sc">-</span>score_centena,<span class="sc">-</span>mobbex,<span class="sc">-</span>loan_id,<span class="sc">-</span>active_loan_header_id,<span class="sc">-</span>pasa_reglas,<span class="sc">-</span>es_autonomo,<span class="sc">-</span>es_menor_de_edad,<span class="sc">-</span>es_integrante_sociedad,<span class="sc">-</span>fecha_alta)</span></code></pre></div>
+</div>
+</div>
+<div id="transformación-de-datos" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Transformación de datos</h2>
+<div id="redefinir-tipo-de-datos" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Redefinir Tipo De Datos</h3>
+<ul>
+<li>De caracter a bool (int)</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="procesamiento-de-datos.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(posicion <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(DfDatosPrestamosUno))</span>
+<span id="cb10-2"><a href="procesamiento-de-datos.html#cb10-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb10-3"><a href="procesamiento-de-datos.html#cb10-3" aria-hidden="true" tabindex="-1"></a>   valor <span class="ot">&lt;-</span> DfDatosPrestamosUno[,posicion]</span>
+<span id="cb10-4"><a href="procesamiento-de-datos.html#cb10-4" aria-hidden="true" tabindex="-1"></a>   class<span class="ot">&lt;-</span><span class="fu">class</span>(valor)</span>
+<span id="cb10-5"><a href="procesamiento-de-datos.html#cb10-5" aria-hidden="true" tabindex="-1"></a>   isNa<span class="ot">&lt;-</span><span class="fu">is.na</span>(valor)</span>
+<span id="cb10-6"><a href="procesamiento-de-datos.html#cb10-6" aria-hidden="true" tabindex="-1"></a>   name<span class="ot">&lt;-</span><span class="fu">names</span>(DfDatosPrestamosUno)[posicion]</span>
+<span id="cb10-7"><a href="procesamiento-de-datos.html#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">class</span>(valor) <span class="sc">==</span> <span class="st">&quot;character&quot;</span> <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(valor) <span class="sc">&amp;&amp;</span> (valor <span class="sc">==</span> <span class="st">&quot;false&quot;</span> <span class="sc">||</span> valor <span class="sc">==</span> <span class="st">&quot;true&quot;</span>))</span>
+<span id="cb10-8"><a href="procesamiento-de-datos.html#cb10-8" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb10-9"><a href="procesamiento-de-datos.html#cb10-9" aria-hidden="true" tabindex="-1"></a>         valores <span class="ot">&lt;-</span> <span class="fu">rbind</span>(valor,(<span class="fu">names</span>(DfDatosPrestamosUno)[posicion]))</span>
+<span id="cb10-10"><a href="procesamiento-de-datos.html#cb10-10" aria-hidden="true" tabindex="-1"></a>         DfDatosPrestamosUno[,posicion]<span class="ot">&lt;-</span>  <span class="fu">as.integer</span>(<span class="fu">as.logical</span>(DfDatosPrestamosUno[,posicion]))</span>
+<span id="cb10-11"><a href="procesamiento-de-datos.html#cb10-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-12"><a href="procesamiento-de-datos.html#cb10-12" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb10-13"><a href="procesamiento-de-datos.html#cb10-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="procesamiento-de-datos.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(posicion <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(DfDatosPrestamosUno))</span>
+<span id="cb11-2"><a href="procesamiento-de-datos.html#cb11-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb11-3"><a href="procesamiento-de-datos.html#cb11-3" aria-hidden="true" tabindex="-1"></a>   valor <span class="ot">&lt;-</span> DfDatosPrestamosUno[,posicion]</span>
+<span id="cb11-4"><a href="procesamiento-de-datos.html#cb11-4" aria-hidden="true" tabindex="-1"></a>   class<span class="ot">&lt;-</span><span class="fu">class</span>(valor)</span>
+<span id="cb11-5"><a href="procesamiento-de-datos.html#cb11-5" aria-hidden="true" tabindex="-1"></a>   isNa<span class="ot">&lt;-</span><span class="fu">is.na</span>(valor)</span>
+<span id="cb11-6"><a href="procesamiento-de-datos.html#cb11-6" aria-hidden="true" tabindex="-1"></a>   name<span class="ot">&lt;-</span><span class="fu">names</span>(DfDatosPrestamosUno)[posicion]</span>
+<span id="cb11-7"><a href="procesamiento-de-datos.html#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">class</span>(valor) <span class="sc">==</span> <span class="st">&quot;character&quot;</span> <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(valor) <span class="sc">&amp;&amp;</span> (valor <span class="sc">==</span> <span class="st">&quot;Si&quot;</span> <span class="sc">||</span> valor <span class="sc">==</span> <span class="st">&quot;No&quot;</span>))</span>
+<span id="cb11-8"><a href="procesamiento-de-datos.html#cb11-8" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb11-9"><a href="procesamiento-de-datos.html#cb11-9" aria-hidden="true" tabindex="-1"></a>         valores <span class="ot">&lt;-</span> <span class="fu">rbind</span>(valor,(<span class="fu">names</span>(DfDatosPrestamosUno)[posicion]))</span>
+<span id="cb11-10"><a href="procesamiento-de-datos.html#cb11-10" aria-hidden="true" tabindex="-1"></a>         DfDatosPrestamosUno[,posicion]<span class="ot">&lt;-</span> <span class="fu">ifelse</span>(DfDatosPrestamosUno[,posicion]<span class="sc">==</span><span class="st">&quot;Si&quot;</span>,<span class="dv">1</span>,<span class="dv">0</span>)</span>
+<span id="cb11-11"><a href="procesamiento-de-datos.html#cb11-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-12"><a href="procesamiento-de-datos.html#cb11-12" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb11-13"><a href="procesamiento-de-datos.html#cb11-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><br></p>
+<ul>
+<li>De Caracter a Date</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="procesamiento-de-datos.html#cb12-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento <span class="ot">=</span> <span class="fu">as.Date</span>(DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento)</span></code></pre></div>
+<ul>
+<li>Reemplazar fecha de nacimiento por edad</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="procesamiento-de-datos.html#cb13-1" aria-hidden="true" tabindex="-1"></a>ModaFechaNacimiento<span class="ot">&lt;-</span><span class="fu">CalcularModa</span>(DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento)</span>
+<span id="cb13-2"><a href="procesamiento-de-datos.html#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="procesamiento-de-datos.html#cb13-3" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento[<span class="fu">is.na</span>(DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento)]<span class="ot">&lt;-</span>ModaFechaNacimiento</span>
+<span id="cb13-4"><a href="procesamiento-de-datos.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="procesamiento-de-datos.html#cb13-5" aria-hidden="true" tabindex="-1"></a>Edades<span class="ot">&lt;-</span> <span class="fu">floor</span>(<span class="fu">age_calc</span>(DfDatosPrestamosUno<span class="sc">$</span>fechanacimiento, <span class="at">units =</span> <span class="st">&quot;years&quot;</span>))</span>
+<span id="cb13-6"><a href="procesamiento-de-datos.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="procesamiento-de-datos.html#cb13-7" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno <span class="ot">&lt;-</span> <span class="fu">mutate</span>(DfDatosPrestamosUno,<span class="at">Edad=</span>Edades)</span></code></pre></div>
+<p>*De entero o caracter a factor</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="procesamiento-de-datos.html#cb14-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>situacion <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>situacion)</span>
+<span id="cb14-2"><a href="procesamiento-de-datos.html#cb14-2" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>nse <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>nse )</span>
+<span id="cb14-3"><a href="procesamiento-de-datos.html#cb14-3" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>codigo_postal <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>codigo_postal)</span>
+<span id="cb14-4"><a href="procesamiento-de-datos.html#cb14-4" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_jubilado <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_jubilado)</span>
+<span id="cb14-5"><a href="procesamiento-de-datos.html#cb14-5" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_empleado <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_empleado)</span>
+<span id="cb14-6"><a href="procesamiento-de-datos.html#cb14-6" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_pnc <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_pnc)</span>
+<span id="cb14-7"><a href="procesamiento-de-datos.html#cb14-7" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_inscripto_monotributo <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_inscripto_monotributo)</span>
+<span id="cb14-8"><a href="procesamiento-de-datos.html#cb14-8" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_moroso <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_moroso)</span>
+<span id="cb14-9"><a href="procesamiento-de-datos.html#cb14-9" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_empleado_domestico<span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_empleado_domestico)</span>
+<span id="cb14-10"><a href="procesamiento-de-datos.html#cb14-10" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>es_empleador <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(DfDatosPrestamosUno<span class="sc">$</span>es_empleador)</span></code></pre></div>
+<p>*De caracter a numerico</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="procesamiento-de-datos.html#cb15-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>score_vig <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(DfDatosPrestamosUno<span class="sc">$</span>score_vig)</span></code></pre></div>
+<pre><code>## Warning: NAs introducidos por coerción</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="procesamiento-de-datos.html#cb17-1" aria-hidden="true" tabindex="-1"></a>DfDatosPrestamosUno<span class="sc">$</span>score_12_meses <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(DfDatosPrestamosUno<span class="sc">$</span>score_12_meses)</span></code></pre></div>
+<pre><code>## Warning: NAs introducidos por coerción</code></pre>
+</div>
+<div id="remplazar-valores-na-o-nulos-imputación" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Remplazar valores NA o Nulos (Imputación)</h3>
+<div id="htmlwidget-ecfb9a1dd02d34ad3e25" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ecfb9a1dd02d34ad3e25">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45"],["cantidad_bancos_ult_24_meses","antiguedad_inscripcion_afip_meses","peor_situacion_con_10","cantidad_bancos","antiguedad_laboral_empleador_actual","codigo_postal","es_pensionado","es_pnc","numero_consultados_otros1mes","score_vig","score_12_meses","nse","ultimo_score12m","es_jubilado","antiguedad_autonomo","es_inscripto_monotributo","disponibilidad_para_endeudamiento","antiguedad_inscripcion_afip_en_meses","peor_situacion_bureau","compromiso_mensual","es_empleado","posee_concursos_o_quiebras","posee_juicios","declaracion_jurada_vigente","es_moroso","empleador_codigo_actividad","antiguedad_laboral","bancarizado","score_f","ingreso_minimo_estimado","descuentos_estimados","es_jubilado_2","es_empleador","es_monotributista","es_empleado_domestico","peor_situacion","peor_situacion_ult_6_meses","bancarizado_ult_24_meses","cant_referencias_comerciales_vigentes","posee_referencias_comerciales_ult24meses","posee_juicio_quiebra_concurso","posee_cheques_rechazados_bcra","posee_referencias_o_morosidades","cantidad_aportes_patronales_impagos12meses","score_ultimo12meses"],[147,130,104,92,59,10,5,5,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],[20.3883495145631,18.0305131761442,14.4244105409154,12.7600554785021,8.18307905686546,1.3869625520111,0.693481276005548,0.693481276005548,0.416088765603329,0.416088765603329,0.416088765603329,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219,0.277392510402219]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variable<\/th>\n      <th>Cantidad<\/th>\n      <th>Porcentaje<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="procesamiento-de-datos.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gg_miss_var</span>(DfDatosPrestamosUno)</span></code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-13"></span>
+<img src="PracticaProfesional_files/figure-html/unnamed-chunk-13-1.png" alt="Graficos Valores Ausentes" width="672" />
+<p class="caption">
+figura 6.6: Graficos Valores Ausentes
+</p>
+</div>
+<p>Como podemos observar hay un total de 45 columnas que tienen valores nulos los cuales procederemos a tratar seleccionado el mejor metedo que se adapte para esto.</p>
+<p>Creamos un nuevo conjuto de datos a imputar a los cuales le sacamos la situacion y nse que son variables a predecir.</p>
+<ul>
+<li>Metodos de imputación.</li>
+</ul>
+<p>Para ello elegiremos cuatro variables y comparemos los metodos para determinar cual es el mas adecuado.</p>
+<ol style="list-style-type: decimal">
+<li>el cual tiene un % de valores faltantes.</li>
+<li>cantidad_bancos_ult_24_meses el cual tiene un 20.3883495 % de valores faltantes.</li>
+<li>peor_situacion_con_10 el cual tiene un 14.4244105 % de valores faltantes.</li>
+<li>es_pnc el cual tiene un 0.6934813 % de valores faltantes.</li>
+</ol>
+<ol style="list-style-type: upper-alpha">
+<li>Mediana/Moda</li>
+</ol>
+<p>En este primer intento por imputar los valor NA ultizamos las tecnicas de Mediana para los valores numericos y la moda para los restantes.</p>
+<p>A.1) Remplazamos los valores cero donde no es posible tener este valor.</p>
+<p>A.2) Vemos como quedo la distribución de valores nulos
+<img src="PracticaProfesional_files/figure-html/Valores%20nulos%20MedMod-1.png" width="672" /></p>
+<p>A.3) Exportar data frame</p>
+<div class="figure"><span id="fig:unnamed-chunk-14"></span>
+<img src="PracticaProfesional_files/figure-html/unnamed-chunk-14-1.png" alt="Comparacion primera variable" width="672" />
+<p class="caption">
+figura 6.7: Comparacion primera variable
+</p>
+</div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##   1.000   2.000   3.000   3.807   5.000  15.000     147</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.000   2.000   3.000   3.642   5.000  15.000</code></pre>
+<div class="figure"><span id="fig:unnamed-chunk-15"></span>
+<img src="PracticaProfesional_files/figure-html/unnamed-chunk-15-1.png" alt="Comparacion segunda variable" width="672" />
+<p class="caption">
+figura 6.8: Comparacion segunda variable
+</p>
+</div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##   0.000   1.000   1.000   1.128   1.000   5.000     104</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    1.00    1.00    1.11    1.00    5.00</code></pre>
+<div class="figure"><span id="fig:unnamed-chunk-16"></span>
+<img src="PracticaProfesional_files/figure-html/unnamed-chunk-16-1.png" alt="Comparacion tercera variable" width="672" />
+<p class="caption">
+figura 6.9: Comparacion tercera variable
+</p>
+</div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##     1.0     1.0    64.5   128.9   219.0   763.0       3</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     1.0     1.0    64.5   128.6   219.0   763.0</code></pre>
+<ol start="2" style="list-style-type: upper-alpha">
+<li><p>Media</p></li>
+<li><p>K vecinos más cercanos</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="desarrollo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["PracticaProfesional.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
